@@ -9,7 +9,7 @@ from art import *
 from random import randint as rnd
 import json
 
-tprint("Citr0n")
+tprint("Zetreit")
 
 # Запрос ширины и высоты поля у игрока
 MAP_H = int(input("Введите ширину экрана: "))
