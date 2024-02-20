@@ -84,13 +84,15 @@ class Map:  # Класс карты
 
     # Сжигание
     def burn(self):
-        for i in range(self.w):  # Если в клетке есть огонь, то очистить её (превратить в поле)
-            for j in range(self.h):
-                cell = self.cells[i][j]
-                if cell == 5:
-                    self.cells[i][j] = 0
-        for i in range(10):  # Сгенерировать огонь 10 раз
-            self.genfire()
+    for i in range(self.w):  # Если в клетке есть огонь, то очистить её (превратить в поле)
+        for j in range(self.h):
+            cell = self.cells[i][j]
+            if cell == 5:
+                self.cells[i][j] = 0
+                # При сгорании дерева у игрока отнимаем очки
+                heli.score -= 1
+    for i in range(10):  # Сгенерировать огонь 10 раз
+        self.genfire()
 
     def heliproc(self, heli, clouds):
 
